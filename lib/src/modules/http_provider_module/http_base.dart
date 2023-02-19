@@ -1,29 +1,26 @@
 part of 'lib_http.dart';
 
-abstract class HttpProvider {
+abstract class HttpBaseProvider {
   final http.Client client;
 
-  HttpProvider(this.client);
+  HttpBaseProvider(this.client);
 
   String get _getUrlDomain => EnvironmentConfig.getDomain();
 
-  Uri _parseUrl(String url) => Uri.parse(url);
-
-  Uri _composeUrl(String endpoint) {
-    String fullUrl = _getUrlDomain + endpoint;
-    return _parseUrl(fullUrl);
+  Uri _composeUrl(HttpRequestModel request) {
+    return Uri.https(_getUrlDomain, request.endPoint, request.queryParams);
   }
 
   Future<HttpResponseModel> get(HttpRequestModel request) async {
     try {
-      final http.Response response =
-          await client.get(_composeUrl(request.endPoint));
-
-      Map<String, dynamic> body = json.decode(response.body);
+      final Uri uri = _composeUrl(request);
+      final http.Response response = await client.get(uri);
+      List body = jsonDecode(response.body);
 
       return HttpResponseModel(statusCode: response.statusCode, body: body);
     } catch (e) {
-      return HttpResponseModel(statusCode: 0, body: {});
+      debugPrint(e.toString());
+      return HttpResponseModel(statusCode: 0, body: []);
     }
   }
 }

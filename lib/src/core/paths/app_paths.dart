@@ -1,5 +1,6 @@
 part of 'lib_paths.dart';
 
 Map<String, WidgetBuilder> get routes => {
-      'home': (context) => const PhotoListView(),
+      'home': (_) => const PhotoView(),
+      'error': (_) => const ErrorView(),
     };

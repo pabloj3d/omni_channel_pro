@@ -4,4 +4,6 @@ class ServicesPaths {
   static String get devDomain => dotenv.env['dev'] ?? '';
   static String get stgDomain => dotenv.env['stage'] ?? '';
   static String get prodDomain => dotenv.env['prod'] ?? '';
+
+  static String get epPhotos => dotenv.env['epPhotos'] ?? '';
 }
