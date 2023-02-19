@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:omni_pro_app/src/core/paths/lib_paths.dart';
 
 void main() async {
+  await DotEnvPaths.load();
   runApp(const MyApp());
 }
 
