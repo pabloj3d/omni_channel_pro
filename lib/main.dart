@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:omni_pro_app/src/core/paths/lib_paths.dart';
+import 'package:omni_pro_app/src/modules/atomic_module.dart/ions/lib_ions.dart';
 
 void main() async {
   await DotEnvPaths.load();
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.purple,
+        primarySwatch: ColorsApp.primarySwatch,
       ),
       initialRoute: 'home',
       routes: routes,
