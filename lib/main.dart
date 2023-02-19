@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:omni_pro_app/src/core/config/theme_config.dart';
 import 'package:omni_pro_app/src/core/paths/lib_paths.dart';
-import 'package:omni_pro_app/src/modules/atomic_module.dart/ions/lib_ions.dart';
 
 void main() async {
   await DotEnvPaths.load();
@@ -14,10 +14,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: ColorsApp.primarySwatch,
-      ),
+      debugShowCheckedModeBanner: false,
+      title: 'Prueba Omni',
+      theme: ThemeConfigApp.themeApp,
       initialRoute: 'home',
       routes: routes,
     );

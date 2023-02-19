@@ -11,7 +11,6 @@ class AppBarAtom extends AppBar {
   }) : super(
           key: key,
           title: StyleAppBarAtom.title(title),
-          backgroundColor: ColorsApp.secundary,
           leading: leading,
           actions: actions,
           shape: StyleAppBarAtom.shape(radius),

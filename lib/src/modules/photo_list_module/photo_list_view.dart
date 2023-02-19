@@ -14,6 +14,6 @@ class _PhotoListViewState extends State<PhotoListView> {
   }
 
   Widget _body() {
-    return PageTemplate(title: 'Photos');
+    return const PageTemplate(title: 'Omni Photos');
   }
 }
