@@ -13,7 +13,7 @@ class _PhotoListViewState extends State<PhotoListView> {
     return _body();
   }
 
-  Scaffold _body() {
-    return Scaffold();
+  Widget _body() {
+    return PageTemplate(title: 'Photos');
   }
 }

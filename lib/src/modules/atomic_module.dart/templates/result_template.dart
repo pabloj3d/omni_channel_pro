@@ -1,14 +1,5 @@
 part of 'lib_templates.dart';
 
-/// Para ocultar los botones, deje los campos:
-/// `textPrimary` y `textSecondary` igual a un string vacío.
-///
-/// **Ejemplo:**
-/// ```dart
-/// textBtnPrimary: '',
-/// textBtnSecondary: '',
-/// ```
-///
 class ResultTemplate extends PageTemplate {
   ResultTemplate({
     super.key,
