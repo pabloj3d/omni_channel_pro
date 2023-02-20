@@ -1,16 +1,19 @@
 # omni_pro_app
 
-A new Flutter project.
+Flutter version: `3.7.3`, channel: `stable`
 
-## Getting Started
+Esta App es creada bajo el paradigma de POO, los principios de SOLID y la metodología Atomic Design.
 
-This project is a starting point for a Flutter application.
+Debido a la sencillez de la App, no fue necesario utilizar gestores de estado como: 
 
-A few resources to get you started if this is your first Flutter project:
+* BLoC
+* Cubit
+* Provider
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+## Run Test
+
+```shell
+flutter test test/src/modules/photo_module/services/photo_gallery_service_test.dart
+```

@@ -15,7 +15,7 @@ abstract class HttpBaseProvider {
     try {
       final Uri uri = _composeUrl(request);
       final http.Response response = await client.get(uri);
-      List body = jsonDecode(response.body);
+      List body = json.decode(response.body);
 
       return HttpResponseModel(statusCode: response.statusCode, body: body);
     } catch (e) {
