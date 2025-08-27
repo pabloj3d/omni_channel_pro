@@ -1,4 +1,4 @@
-# omni_pro_app
+# omni_channel_pro_app
 
 Flutter version: `3.7.3`, channel: `stable`
 
